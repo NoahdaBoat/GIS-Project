@@ -58,8 +58,8 @@ int get_foursquare_data(std::string category, std::string city, std::string coun
     slist = NULL;
     slist = curl_slist_append(slist, "Accept: application/json");
     
-    // Technically the auth key should be read in from a secure file - placing this on GitHub or anywhere accessible may cost $$$
-    std::string auth = "Authorization: fsq37clEEO24dopFGXqnCT+OPC9RcXkS8DiFduKKVhSNtyA=";
+    // Technically the auth key should be read in from a secure file
+    std::string auth = "Authorization: REDACTED";
     //std::string auth = "bad";
     const char *auther = auth.c_str();
     slist = curl_slist_append(slist, auther);
