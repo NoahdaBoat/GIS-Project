@@ -17,6 +17,8 @@ The codebase also contains a multi-threaded implementation of the Simulated Anne
 ### Details
 The software utilizes culling to increase performance by skipping the calculation and rendering of features not in the users current view.
 
+To find the best route between two locations on the map, the A* algorithm was implemented.
+
 Code was written to take advantage of libjsoncpp to parse the API data from FourSquare and display the most relevant POIs across the selected city, with additional information available such as phone numbers, ratings, and websites.
 
-The algorithm to generate a route for multiple stops uses OpenMP to create an adjacency matrix between all stops. Next it performs several permutation algorithms (e.g. 3-OPT & 4-OPT) to find a sutible starting route that can be fine tuned. Next, using std::async, the Simulated Annealing algorithm is run to find the best route within a local minimum. The route between multiple depots was constrained to be completed in under one minute.
+The algorithm to generate a route for multiple stops uses OpenMP to create an adjacency matrix between all stops, and to run the Multi-Dijkstra algorithm to find the distance (cost) between all stops. Next it performs several permutation algorithms (e.g. 3-OPT & 4-OPT) to find a sutible starting route that can be fine tuned. Next, using std::async, the Simulated Annealing algorithm is run to find the best route within a local minimum. The route between multiple depots was constrained to be completed in under one minute.
