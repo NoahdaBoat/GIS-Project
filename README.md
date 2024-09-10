@@ -8,7 +8,7 @@ This software was written in C++ and uses GTK3.0 to display curated OSM data for
 
 Users select a city and can view various layers such as transit, points of interest, and live data from FourSquare.
 
-Roads are highlighted based on the selected level of detail, as well as the drawing and thickness of map features such as buildings.
+Roads are highlighted based on the selected level of detail, as well as the drawing and thickness of map features such as buildings. The map's colours can be inverted (light to dark and vice-versa) based on user preferences.
 
 Selecting two interesections on the map will generate a travel path highlighted on the map, as well as turn-by-turn directions.
 
